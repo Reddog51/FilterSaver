@@ -61,6 +61,7 @@ namespace FilterSaver
             }
             List<string> temp = lbSavedBongoFilters.Items.Cast<string>().ToList();
             temp.Add(incomingString);
+            writer.WriteNewFiltersToDisk(incomingString);
             writer.WriteSavedFiltersToDisk(ActiveControl.Parent.Controls);
             lbSavedBongoFilters.DataSource = temp;
             tbAddFilter.Text = string.Empty;

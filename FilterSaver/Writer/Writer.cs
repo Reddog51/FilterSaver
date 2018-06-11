@@ -23,7 +23,9 @@ namespace FilterSaver.Writer
             bool bRet = false;
 
             ListBox lb = (ListBox)cc["lbSavedBongoFilters"];
-
+            
+            List<string> FilterNames = lb.Items.Cast<string>().ToList();
+            FilterNames = (List<string>) lb.DataSource;
             string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             folder = GetUserAppDataLocalRoamingFolder(UserPrincipal.Current.Sid.ToString());
 
@@ -33,13 +35,13 @@ namespace FilterSaver.Writer
                 Directory.CreateDirectory(folder);
             StreamWriter sw = new StreamWriter(folder + @"savedFilters.txt");
             if (NewFilter != string.Empty) {
-                lb.Items.Add(NewFilter);
+                FilterNames.Add(NewFilter);
                 FilterCount++;
             }
-            foreach (var car in lb.Items)
+            foreach (var name in FilterNames)
             {
-                System.Diagnostics.Debug.Write(car.ToString() + "\n");
-                sw.WriteLine(car.ToString());
+                System.Diagnostics.Debug.Write(name.ToString() + "\n");
+                sw.WriteLine(name.ToString());
                 sw.Flush();
                 ItemWriteCounter++;
             }
@@ -51,7 +53,7 @@ namespace FilterSaver.Writer
             return bRet;
         }
 
-        public bool WriteSavedFiltersToDisk(string newFilter) {
+        public bool WriteNewFiltersToDisk(string newFilter) {
             NewFilter = newFilter;
             return true;
         }
