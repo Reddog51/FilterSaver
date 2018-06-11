@@ -33,6 +33,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnAddFilter = new System.Windows.Forms.Button();
             this.tbAddFilter = new System.Windows.Forms.TextBox();
+            this.btnDeleteFilter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbSavedBongoFilters
@@ -46,7 +47,7 @@
             // 
             // btnLoadFilter
             // 
-            this.btnLoadFilter.Location = new System.Drawing.Point(573, 377);
+            this.btnLoadFilter.Location = new System.Drawing.Point(499, 375);
             this.btnLoadFilter.Name = "btnLoadFilter";
             this.btnLoadFilter.Size = new System.Drawing.Size(75, 23);
             this.btnLoadFilter.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(573, 415);
+            this.btnClose.Location = new System.Drawing.Point(618, 375);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 2;
@@ -66,7 +67,7 @@
             // 
             // btnAddFilter
             // 
-            this.btnAddFilter.Location = new System.Drawing.Point(573, 337);
+            this.btnAddFilter.Location = new System.Drawing.Point(499, 326);
             this.btnAddFilter.Name = "btnAddFilter";
             this.btnAddFilter.Size = new System.Drawing.Size(75, 23);
             this.btnAddFilter.TabIndex = 3;
@@ -82,11 +83,22 @@
             this.tbAddFilter.TabIndex = 4;
             this.tbAddFilter.Visible = false;
             // 
+            // btnDeleteFilter
+            // 
+            this.btnDeleteFilter.Location = new System.Drawing.Point(618, 326);
+            this.btnDeleteFilter.Name = "btnDeleteFilter";
+            this.btnDeleteFilter.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteFilter.TabIndex = 5;
+            this.btnDeleteFilter.Text = "&Delete Filter";
+            this.btnDeleteFilter.UseVisualStyleBackColor = true;
+            this.btnDeleteFilter.Click += new System.EventHandler(this.btnDeleteFilter_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDeleteFilter);
             this.Controls.Add(this.tbAddFilter);
             this.Controls.Add(this.btnAddFilter);
             this.Controls.Add(this.btnClose);
@@ -107,6 +119,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnAddFilter;
         private System.Windows.Forms.TextBox tbAddFilter;
+        private System.Windows.Forms.Button btnDeleteFilter;
     }
 }
 

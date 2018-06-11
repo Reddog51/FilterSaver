@@ -51,6 +51,7 @@ namespace FilterSaver.Reader
                 SavedFilters.Add(line);
             }
             sr.Close();
+            SavedFilters.Sort();
             return SavedFilters;
         }
 

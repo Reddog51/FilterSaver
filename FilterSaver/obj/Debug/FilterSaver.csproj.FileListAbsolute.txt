@@ -11,3 +11,16 @@ C:\Users\rob\source\repos\FilterSaver\FilterSaver\obj\Debug\FilterSaver.pdb
 C:\Users\rob\source\repos\FilterSaver\FilterSaver\bin\Debug\Newtonsoft.Json.dll
 C:\Users\rob\source\repos\FilterSaver\FilterSaver\bin\Debug\Newtonsoft.Json.xml
 C:\Users\rob\source\repos\FilterSaver\FilterSaver\obj\Debug\FilterSaver.csproj.CopyComplete
+C:\Users\rob\source\repos\FilterSaver\FilterSaver\FilterSaver\bin\Debug\FilterSaver.exe.config
+C:\Users\rob\source\repos\FilterSaver\FilterSaver\FilterSaver\bin\Debug\FilterSaver.exe
+C:\Users\rob\source\repos\FilterSaver\FilterSaver\FilterSaver\bin\Debug\FilterSaver.pdb
+C:\Users\rob\source\repos\FilterSaver\FilterSaver\FilterSaver\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rob\source\repos\FilterSaver\FilterSaver\FilterSaver\bin\Debug\Newtonsoft.Json.xml
+C:\Users\rob\source\repos\FilterSaver\FilterSaver\FilterSaver\obj\Debug\FilterSaver.csprojAssemblyReference.cache
+C:\Users\rob\source\repos\FilterSaver\FilterSaver\FilterSaver\obj\Debug\FilterSaver.Form1.resources
+C:\Users\rob\source\repos\FilterSaver\FilterSaver\FilterSaver\obj\Debug\FilterSaver.Properties.Resources.resources
+C:\Users\rob\source\repos\FilterSaver\FilterSaver\FilterSaver\obj\Debug\FilterSaver.csproj.GenerateResource.cache
+C:\Users\rob\source\repos\FilterSaver\FilterSaver\FilterSaver\obj\Debug\FilterSaver.csproj.CoreCompileInputs.cache
+C:\Users\rob\source\repos\FilterSaver\FilterSaver\FilterSaver\obj\Debug\FilterSaver.csproj.CopyComplete
+C:\Users\rob\source\repos\FilterSaver\FilterSaver\FilterSaver\obj\Debug\FilterSaver.exe
+C:\Users\rob\source\repos\FilterSaver\FilterSaver\FilterSaver\obj\Debug\FilterSaver.pdb

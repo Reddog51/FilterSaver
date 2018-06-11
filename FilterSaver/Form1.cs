@@ -21,8 +21,6 @@ namespace FilterSaver
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Writer.Writer writer = new Writer.Writer();
-            writer.WriteSavedFiltersToDisk(ActiveForm.Controls);
             Application.Exit();
         }
 
@@ -43,16 +41,41 @@ namespace FilterSaver
         private void btnAddFilter_Click(object sender, EventArgs e)
         {
             var dropper = tbAddFilter.Visible ? tbAddFilter.Visible = false : tbAddFilter.Visible = true;
+            Button b = (Button)sender;
             Writer.Writer writer = new Writer.Writer();
             string incomingString = tbAddFilter.Text;
-            if (incomingString == String.Empty) {
-                lbSavedBongoFilters.Focus();
+            if (incomingString == String.Empty)
+            {
+                //lbSavedBongoFilters.Focus();
+                tbAddFilter.Focus();
+                
+                if (b.Text == "&Add Filter")
+                {
+                    b.Text = "&Save Filter";
+                }
                 return;
+            }
+            else
+            {
+                b.Text = "&Add Filter";
             }
             List<string> temp = lbSavedBongoFilters.Items.Cast<string>().ToList();
             temp.Add(incomingString);
             writer.WriteSavedFiltersToDisk(ActiveControl.Parent.Controls);
             lbSavedBongoFilters.DataSource = temp;
+            tbAddFilter.Text = string.Empty;
+        }
+
+        private void btnDeleteFilter_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("are you sure?");
+            if (dr.ToString() == "ok")
+            {
+                throw new NotImplementedException("get Id, Get datasource as list, delete from list, rebind list to datasource");
+            }
+            else {
+                return;
+            }
         }
     }
 }

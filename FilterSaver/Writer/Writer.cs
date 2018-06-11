@@ -29,7 +29,6 @@ namespace FilterSaver.Writer
 
             int FilterCount = lb.Items.Count;
             int ItemWriteCounter = 0;
-            folder = folder + @"\Inworks\";
             if (!Directory.Exists(folder))
                 Directory.CreateDirectory(folder);
             StreamWriter sw = new StreamWriter(folder + @"savedFilters.txt");
