@@ -43,9 +43,15 @@
             this.lblA = new System.Windows.Forms.Label();
             this.lblB = new System.Windows.Forms.Label();
             this.lblC = new System.Windows.Forms.Label();
-            this.lblD = new System.Windows.Forms.Label();
             this.lblE = new System.Windows.Forms.Label();
             this.lblF = new System.Windows.Forms.Label();
+            this.lblG = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbD = new System.Windows.Forms.Label();
+            this.lbH = new System.Windows.Forms.Label();
+            this.txtD = new System.Windows.Forms.TextBox();
+            this.txtH = new System.Windows.Forms.TextBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbSavedBongoFilters
@@ -108,7 +114,7 @@
             // cboA
             // 
             this.cboA.FormattingEnabled = true;
-            this.cboA.Location = new System.Drawing.Point(66, 53);
+            this.cboA.Location = new System.Drawing.Point(68, 19);
             this.cboA.Name = "cboA";
             this.cboA.Size = new System.Drawing.Size(121, 21);
             this.cboA.TabIndex = 6;
@@ -116,7 +122,7 @@
             // cboB
             // 
             this.cboB.FormattingEnabled = true;
-            this.cboB.Location = new System.Drawing.Point(66, 107);
+            this.cboB.Location = new System.Drawing.Point(68, 73);
             this.cboB.Name = "cboB";
             this.cboB.Size = new System.Drawing.Size(121, 21);
             this.cboB.TabIndex = 7;
@@ -124,7 +130,7 @@
             // cboC
             // 
             this.cboC.FormattingEnabled = true;
-            this.cboC.Location = new System.Drawing.Point(66, 166);
+            this.cboC.Location = new System.Drawing.Point(68, 132);
             this.cboC.Name = "cboC";
             this.cboC.Size = new System.Drawing.Size(121, 21);
             this.cboC.TabIndex = 8;
@@ -132,7 +138,7 @@
             // cboD
             // 
             this.cboD.FormattingEnabled = true;
-            this.cboD.Location = new System.Drawing.Point(235, 53);
+            this.cboD.Location = new System.Drawing.Point(237, 19);
             this.cboD.Name = "cboD";
             this.cboD.Size = new System.Drawing.Size(121, 21);
             this.cboD.TabIndex = 9;
@@ -140,7 +146,7 @@
             // cboE
             // 
             this.cboE.FormattingEnabled = true;
-            this.cboE.Location = new System.Drawing.Point(235, 107);
+            this.cboE.Location = new System.Drawing.Point(237, 73);
             this.cboE.Name = "cboE";
             this.cboE.Size = new System.Drawing.Size(121, 21);
             this.cboE.TabIndex = 10;
@@ -148,7 +154,7 @@
             // cboF
             // 
             this.cboF.FormattingEnabled = true;
-            this.cboF.Location = new System.Drawing.Point(235, 166);
+            this.cboF.Location = new System.Drawing.Point(237, 132);
             this.cboF.Name = "cboF";
             this.cboF.Size = new System.Drawing.Size(121, 21);
             this.cboF.TabIndex = 11;
@@ -156,7 +162,7 @@
             // lblA
             // 
             this.lblA.AutoSize = true;
-            this.lblA.Location = new System.Drawing.Point(13, 53);
+            this.lblA.Location = new System.Drawing.Point(15, 19);
             this.lblA.Name = "lblA";
             this.lblA.Size = new System.Drawing.Size(14, 13);
             this.lblA.TabIndex = 12;
@@ -165,7 +171,7 @@
             // lblB
             // 
             this.lblB.AutoSize = true;
-            this.lblB.Location = new System.Drawing.Point(13, 107);
+            this.lblB.Location = new System.Drawing.Point(15, 73);
             this.lblB.Name = "lblB";
             this.lblB.Size = new System.Drawing.Size(14, 13);
             this.lblB.TabIndex = 13;
@@ -174,56 +180,102 @@
             // lblC
             // 
             this.lblC.AutoSize = true;
-            this.lblC.Location = new System.Drawing.Point(12, 169);
+            this.lblC.Location = new System.Drawing.Point(14, 135);
             this.lblC.Name = "lblC";
             this.lblC.Size = new System.Drawing.Size(14, 13);
             this.lblC.TabIndex = 14;
             this.lblC.Text = "C";
             // 
-            // lblD
-            // 
-            this.lblD.AutoSize = true;
-            this.lblD.Location = new System.Drawing.Point(382, 53);
-            this.lblD.Name = "lblD";
-            this.lblD.Size = new System.Drawing.Size(15, 13);
-            this.lblD.TabIndex = 15;
-            this.lblD.Text = "D";
-            // 
             // lblE
             // 
             this.lblE.AutoSize = true;
-            this.lblE.Location = new System.Drawing.Point(382, 110);
+            this.lblE.Location = new System.Drawing.Point(384, 19);
             this.lblE.Name = "lblE";
             this.lblE.Size = new System.Drawing.Size(14, 13);
-            this.lblE.TabIndex = 16;
+            this.lblE.TabIndex = 15;
             this.lblE.Text = "E";
             // 
             // lblF
             // 
             this.lblF.AutoSize = true;
-            this.lblF.Location = new System.Drawing.Point(382, 169);
+            this.lblF.Location = new System.Drawing.Point(384, 76);
             this.lblF.Name = "lblF";
             this.lblF.Size = new System.Drawing.Size(13, 13);
-            this.lblF.TabIndex = 17;
+            this.lblF.TabIndex = 16;
             this.lblF.Text = "F";
+            // 
+            // lblG
+            // 
+            this.lblG.AutoSize = true;
+            this.lblG.Location = new System.Drawing.Point(384, 135);
+            this.lblG.Name = "lblG";
+            this.lblG.Size = new System.Drawing.Size(15, 13);
+            this.lblG.TabIndex = 17;
+            this.lblG.Text = "G";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtH);
+            this.groupBox1.Controls.Add(this.txtD);
+            this.groupBox1.Controls.Add(this.lbH);
+            this.groupBox1.Controls.Add(this.lbD);
+            this.groupBox1.Controls.Add(this.cboD);
+            this.groupBox1.Controls.Add(this.lblG);
+            this.groupBox1.Controls.Add(this.cboA);
+            this.groupBox1.Controls.Add(this.lblF);
+            this.groupBox1.Controls.Add(this.cboB);
+            this.groupBox1.Controls.Add(this.lblE);
+            this.groupBox1.Controls.Add(this.cboC);
+            this.groupBox1.Controls.Add(this.lblC);
+            this.groupBox1.Controls.Add(this.cboE);
+            this.groupBox1.Controls.Add(this.lblB);
+            this.groupBox1.Controls.Add(this.cboF);
+            this.groupBox1.Controls.Add(this.lblA);
+            this.groupBox1.Location = new System.Drawing.Point(32, 13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(414, 249);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // lbD
+            // 
+            this.lbD.AutoSize = true;
+            this.lbD.Location = new System.Drawing.Point(15, 199);
+            this.lbD.Name = "lbD";
+            this.lbD.Size = new System.Drawing.Size(15, 13);
+            this.lbD.TabIndex = 18;
+            this.lbD.Text = "D";
+            // 
+            // lbH
+            // 
+            this.lbH.AutoSize = true;
+            this.lbH.Location = new System.Drawing.Point(382, 211);
+            this.lbH.Name = "lbH";
+            this.lbH.Size = new System.Drawing.Size(15, 13);
+            this.lbH.TabIndex = 19;
+            this.lbH.Text = "H";
+            // 
+            // txtD
+            // 
+            this.txtD.Location = new System.Drawing.Point(68, 191);
+            this.txtD.Name = "txtD";
+            this.txtD.Size = new System.Drawing.Size(121, 20);
+            this.txtD.TabIndex = 20;
+            // 
+            // txtH
+            // 
+            this.txtH.Location = new System.Drawing.Point(237, 191);
+            this.txtH.Name = "txtH";
+            this.txtH.Size = new System.Drawing.Size(121, 20);
+            this.txtH.TabIndex = 21;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblF);
-            this.Controls.Add(this.lblE);
-            this.Controls.Add(this.lblD);
-            this.Controls.Add(this.lblC);
-            this.Controls.Add(this.lblB);
-            this.Controls.Add(this.lblA);
-            this.Controls.Add(this.cboF);
-            this.Controls.Add(this.cboE);
-            this.Controls.Add(this.cboD);
-            this.Controls.Add(this.cboC);
-            this.Controls.Add(this.cboB);
-            this.Controls.Add(this.cboA);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnDeleteFilter);
             this.Controls.Add(this.tbAddFilter);
             this.Controls.Add(this.btnAddFilter);
@@ -233,6 +285,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,9 +309,14 @@
         private System.Windows.Forms.Label lblA;
         private System.Windows.Forms.Label lblB;
         private System.Windows.Forms.Label lblC;
-        private System.Windows.Forms.Label lblD;
         private System.Windows.Forms.Label lblE;
         private System.Windows.Forms.Label lblF;
+        private System.Windows.Forms.Label lblG;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lbH;
+        private System.Windows.Forms.Label lbD;
+        private System.Windows.Forms.TextBox txtH;
+        private System.Windows.Forms.TextBox txtD;
     }
 }
 

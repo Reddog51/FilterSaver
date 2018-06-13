@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.DirectoryServices.AccountManagement;
 using System.IO;
-using static System.Windows.Forms.Control;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FilterSaver.Properties;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 using Microsoft.Win32;
 
@@ -16,6 +16,12 @@ namespace FilterSaver.Reader
 {
     public class Reader
     {
+
+        // TODO write function and class to get paths to the correct folder.  code to get folders is growing
+        // TODO need function to get necessar list boxes that are dealt with.
+        // clean up the write.
+        // currently writing but not reading the files as json.
+
         public Reader() { }
 
         public void LoadSavedFilters(string filterType, System.Windows.Forms.ListBox lb) {
@@ -37,20 +43,18 @@ namespace FilterSaver.Reader
         {
             List<string> SavedFilters = new List<string>();
             UserPrincipal localUP = UserPrincipal.Current;
-            string FullPath = GetUserAppDataLocalRoamingFolder(localUP.Sid.ToString()) + @"savedFilters.txt";
+            string FullPath = GetUserAppDataLocalRoamingFolder(localUP.Sid.ToString()) + @"savedFilters.json";
             if (!File.Exists(FullPath))
             {
                 throw new Exception("Would you like to save a filter, you don't have any saved yet.");
                 //return SavedFilters;
             }
-            StreamReader sr = new StreamReader(GetUserAppDataLocalRoamingFolder(localUP.Sid.ToString()) + @"\savedFilters.txt");
+            StreamReader sr = new StreamReader(GetUserAppDataLocalRoamingFolder(localUP.Sid.ToString()) + @"\savedFilters.json");
             
             string line = string.Empty;
-            while ((line = sr.ReadLine()) != null)
-            {
-                SavedFilters.Add(line);
-            }
-            sr.Close();
+            string output = sr.ReadToEnd();
+            SavedFilters = JsonConvert.DeserializeObject<List<string>>(output);
+            
             SavedFilters.Sort();
             return SavedFilters;
         }

@@ -40,13 +40,13 @@ namespace FilterSaver
 
         private void btnAddFilter_Click(object sender, EventArgs e)
         {
+            #region button handling
             var dropper = tbAddFilter.Visible ? tbAddFilter.Visible = false : tbAddFilter.Visible = true;
             Button b = (Button)sender;
             Writer.Writer writer = new Writer.Writer();
             string incomingString = tbAddFilter.Text;
             if (incomingString == String.Empty)
             {
-                //lbSavedBongoFilters.Focus();
                 tbAddFilter.Focus();
                 
                 if (b.Text == "&Add Filter")
@@ -59,19 +59,20 @@ namespace FilterSaver
             {
                 b.Text = "&Add Filter";
             }
-            List<string> temp = lbSavedBongoFilters.Items.Cast<string>().ToList();
-            temp.Add(incomingString);
+            #endregion
             writer.WriteNewFiltersToDisk(incomingString);
-            writer.WriteSavedFiltersToDisk(ActiveControl.Parent.Controls);
-            lbSavedBongoFilters.DataSource = temp;
-            tbAddFilter.Text = string.Empty;
+            
+            writer.WriteSavedFiltersToDisk(groupBox1);
         }
 
         private void btnDeleteFilter_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("are you sure?");
-            if (dr.ToString() == "ok")
+            if (dr.ToString().ToLower() == "ok")
             {
+                ListBox lb = (ListBox)sender;
+                List<string> CurrentFilters = (List<string>)lb.DataSource;
+                string str = lb.Text;
                 throw new NotImplementedException("get Id, Get datasource as list, delete from list, rebind list to datasource");
             }
             else {
@@ -79,4 +80,5 @@ namespace FilterSaver
             }
         }
     }
+
 }
